@@ -38,6 +38,12 @@ public class ClientServiceBDImpl implements ClientService {
 			throws InterruptedException, ExecutionException, BusinessException, RequiredException {
 		Cliente cliente = convertDTOtoClient(clienteDTO);
 		validarRegistroClienteBasico(cliente);
+		if (StringUtils.isNotEmpty(cliente.getId())) {
+			Optional<Cliente> optCliente = findById(cliente.getId());
+			if (!optCliente.isPresent()) {
+				throw new BusinessException("No existe cliente con ese ID");
+			}
+		}
 		cliente = clienteRepository.save(cliente);
 		return cliente;
 	}
