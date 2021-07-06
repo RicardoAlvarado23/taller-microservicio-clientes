@@ -1,0 +1,3 @@
+# Taller microservicio clientes
+
+Taller de backend java de microservicios desarrollado con java 1.8. Integración con Base de datos no relacional en Cloud Firestore y BD relacional de Postgresql desplegada en Amazon RDS. El proyecto se encuentra desplegado en AWS 1.  Elastic Beanstalk y los servicios REST documentados con swagger en la URL: http://tallercloudmscliente-env.eba-w3fd8pri.sa-east-1.elasticbeanstalk.com/swagger-ui.html#/
